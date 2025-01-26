@@ -89,7 +89,7 @@ def start_eel(develop):
         size=(1280, 800),
     )
     try:
-        eel.start(page, mode=app, **eel_kwargs)
+        eel.start(page, mode='electron', cmdline_args=['node_modules/electron/dist/electron.exe'], **eel_kwargs)
  
     except EnvironmentError:
         # If Chrome isn't found, fallback to Microsoft Edge on Win10 or greater
